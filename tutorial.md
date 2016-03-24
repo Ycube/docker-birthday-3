@@ -247,7 +247,7 @@ If you're on Linux, you can open [http://localhost:32773](http://localhost:32773
 $ docker-machine ip default
 192.168.99.100
 ```
-You can now open [http://192.168.99.100:32773](http://192.168.99.100:32773) to see your site live!
+You can now open [http://192.168.99.100:32773](http://192.168.99.100:32773) (replace 32773 with your port for 80/tcp) to see your site live!
 
 You can also run a second webserver at the same time, specifying a custom host port mapping to the container's webserver.
 
@@ -588,6 +588,8 @@ $ docker login
 ```
 
 And follow the login directions. Now you can push images to Docker Hub.
+
+> Note: If you encounter an error response from daemon while attempting to login, you may need to restart your machine by running `docker-machine restart <YOUR_DOCKER_MACHINE_NAME>`.
 
 
 <a id="pullimage"></a>
